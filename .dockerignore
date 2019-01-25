@@ -4,4 +4,9 @@ target/liberty/wlp/usr/servers/defaultServer/workarea
 target/liberty/wlp/usr/servers/defaultServer/.classCache
 target/liberty/wlp/usr/servers/defaultServer/.pid
 
-mc-target/*
+mc-target/liberty/wlp/usr/servers/defaultServer/logs
+mc-target/liberty/wlp/usr/servers/defaultServer/workarea
+mc-target/liberty/wlp/usr/servers/defaultServer/.classCache
+mc-target/liberty/wlp/usr/servers/defaultServer/.pid
+
+
