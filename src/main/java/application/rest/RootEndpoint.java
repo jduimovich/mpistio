@@ -16,7 +16,6 @@ import java.util.ArrayList;
   
 import javax.ws.rs.core.UriInfo;
 
-
 @Path("/")
 public class RootEndpoint {
     static String kv(String k, String v) { 
@@ -28,7 +27,7 @@ public class RootEndpoint {
     }
     
     @GET
-    @Path("frontpage")
+    @Path("ui")
     @Produces({ MediaType.TEXT_HTML })
     public InputStream getFrontPage() {
         try {
@@ -38,9 +37,8 @@ public class RootEndpoint {
         }
     }
 
-    // /get 
     @GET
-    @Path("get")
+    @Path("test")
     @Produces(MediaType.APPLICATION_JSON)
     public Response apiGet() {
         long t = System.currentTimeMillis();
@@ -55,9 +53,8 @@ public class RootEndpoint {
         return Response.ok(sb.toString()).build();
     }
 
-    // /all 
     @GET
-    @Path("all")
+    @Path("headers")
     @Produces(MediaType.APPLICATION_JSON)
     public Response apiAll(@Context HttpHeaders headers) { 
         String response = "{\n";
@@ -69,7 +66,6 @@ public class RootEndpoint {
         response += "\n}"; 
         return Response.ok(response).build();
     }
-
 
     @GET
     @Produces({ MediaType.TEXT_HTML })
